@@ -2,11 +2,24 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getHello(): any {
+    let a,b : number;
+    a = 13;
+    b = 11;
+    const res = this.addTwoNumbers(a,b);
+    
+    if (res%2==0) {
+      return res + " - парне число"
+    }
+    else return res + "- непарне число";
   }
+  
+    public addTwoNumbers(a: number, b: number): any {
+      const result = a + b;
+      return result;
+    }
 
-  getNumbers(): number {
+ /* getNumbers(): number {
     const a = 90;
     const b = 3.14;
     const c = a + b;
@@ -41,4 +54,5 @@ export class AppService {
     employee.push(2, 'John');
     return employee;
   }
+*/  
 }

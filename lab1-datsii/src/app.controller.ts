@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  /* @Get()
   get() {
     return this.appService.getHello()
     + '<br/>' + this.appService.getStrings()
@@ -14,5 +14,10 @@ export class AppController {
     + '<br/>' + this.appService.getEnum()
     + '<br/>' + this.appService.getMultipleArrays()
     + '<br/>' + this.appService.getMultipleValues();
+  } */
+
+  @Get()
+  get() {
+    return this.appService.getHello();
   }
 }
